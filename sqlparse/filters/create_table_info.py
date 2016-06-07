@@ -9,6 +9,7 @@ from sqlparse import tokens as T
 from types import GeneratorType
 
 
+# FIXME: Don't use Pipeline if not necessary. Replace with stream
 class Pipeline(list):
     """Pipeline to process filters sequentially"""
 
@@ -49,6 +50,7 @@ def get_create_table_info(stream):
     return pipe(stream)
 
 
+# FIXME: Use StripWhitespace Filter instead of removed StripWhitespace
 def StripWhitespace(stream):
     "Strip the useless whitespaces from a stream leaving only the minimal ones"
     last_type = None
@@ -77,6 +79,7 @@ def StripWhitespace(stream):
         last_type = token_type
 
 
+# FIXME: Refactor code into smaller functions
 class InfoCreateTable(object):
     # sqlparse outputs some tokens as Keyword at places where they are names
     ALLOWED_KEYWORD_AS_NAME = 'data', 'source', 'type'

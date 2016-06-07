@@ -7,6 +7,8 @@ from sqlparse.filters import get_create_table_info
 from sqlparse.lexer import tokenize
 
 
+# TODO: Use Py.Test for testing compat from 2.6, 2.7, 3.3-3.5+
+# TODO: Format test
 class TestCasePy27Features(object):
     class __AssertRaisesContext(object):
         def __init__(self, expected_exception, expected_regexp):
@@ -35,8 +37,7 @@ class TestCasePy27Features(object):
         return self.__AssertRaisesContext(expected_exception, expected_regexp)
 
 
-
-
+# TODO: Update exception in test for Py3 compat
 class Test_GetCreateTableInfo(TestCase, TestCasePy27Features):
     sql1 = """
         CREATE TABLE item (
