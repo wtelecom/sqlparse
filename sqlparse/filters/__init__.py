@@ -20,6 +20,7 @@ from sqlparse.filters.tokens import TruncateStringFilter
 from sqlparse.filters.reindent import ReindentFilter
 from sqlparse.filters.right_margin import RightMarginFilter
 from sqlparse.filters.aligned_indent import AlignedIndentFilter
+from sqlparse.filters.create_table_info import get_create_table_info
 
 __all__ = [
     'SerializerUnicode',
@@ -37,4 +38,6 @@ __all__ = [
     'ReindentFilter',
     'RightMarginFilter',
     'AlignedIndentFilter',
+
+    'get_create_table_info',
 ]

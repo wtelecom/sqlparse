@@ -3,7 +3,7 @@
 import re
 from unittest import TestCase
 
-from sqlparse.functions_tmp import get_create_table_info
+from sqlparse.filters import get_create_table_info
 from sqlparse.lexer import tokenize
 
 
