@@ -329,7 +329,6 @@ KEYWORDS = {
     'LENGTH': tokens.Keyword,
     'LESS': tokens.Keyword,
     'LEVEL': tokens.Keyword,
-    'LIMIT': tokens.Keyword,
     'LISTEN': tokens.Keyword,
     'LOAD': tokens.Keyword,
     'LOCAL': tokens.Keyword,
@@ -655,6 +654,7 @@ KEYWORDS_COMMON = {
     'ALTER': tokens.Keyword.DDL,
 
     'WHERE': tokens.Keyword,
+    'LIMIT': tokens.Keyword,
     'FROM': tokens.Keyword,
     'INNER': tokens.Keyword,
     'JOIN': tokens.Keyword,
