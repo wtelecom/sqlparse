@@ -45,9 +45,10 @@ class ReindentFilter(object):
         return sql.Token(T.Whitespace, self.n + self.char * self.leading_ws)
 
     def _next_token(self, tlist, idx=-1):
-        split_words = ('FROM', 'STRAIGHT_JOIN$', 'JOIN$', 'AND', 'OR',
+        split_words = ('FROM', 'STRAIGHT_JOIN$', 'JOIN$', #'AND', 'OR',
                        'GROUP', 'ORDER', 'UNION', 'VALUES',
-                       'SET', 'BETWEEN', 'EXCEPT', 'HAVING')
+                       'SET', 'BETWEEN', 'EXCEPT', 'HAVING', 'LIMIT',
+                       'GRANULARITY', 'QINTERVAL')
         m_split = T.Keyword, split_words, True
         tidx, token = tlist.token_next_by(m=m_split, idx=idx)
 

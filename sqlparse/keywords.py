@@ -275,6 +275,7 @@ KEYWORDS = {
     'GOTO': tokens.Keyword,
     'GRANT': tokens.Keyword,
     'GRANTED': tokens.Keyword,
+    'GRANULARITY': tokens.Keyword,
     'GROUPING': tokens.Keyword,
 
     'HANDLER': tokens.Keyword,
@@ -434,6 +435,8 @@ KEYWORDS = {
     'PROCEDURAL': tokens.Keyword,
     'PROCEDURE': tokens.Keyword,
     'PUBLIC': tokens.Keyword,
+
+    'QINTERVAL': tokens.Keyword,
 
     'RAISE': tokens.Keyword,
     'RAW': tokens.Keyword,
